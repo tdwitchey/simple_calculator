@@ -149,7 +149,12 @@ public class CalculatorMain extends AppCompatActivity {
         ctrlDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValue1 = Float.parseFloat(mainDisplay.getText() + "");
+                if (mainDisplay.getText() == "" || mainDisplay.getText() == null){
+                    mValue1 = 0;
+                }
+                else{
+                    mValue1 = Float.parseFloat(mainDisplay.getText() + "");
+                }
                 division = true;
                 mainDisplay.setText(null);
             }
@@ -157,7 +162,12 @@ public class CalculatorMain extends AppCompatActivity {
         ctrlMulti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValue1 = Float.parseFloat(mainDisplay.getText() + "");
+                if (mainDisplay.getText() == "" || mainDisplay.getText() == null){
+                    mValue1 = 0;
+                }
+                else{
+                    mValue1 = Float.parseFloat(mainDisplay.getText() + "");
+                }
                 multiplication = true;
                 mainDisplay.setText(null);
             }
@@ -165,7 +175,12 @@ public class CalculatorMain extends AppCompatActivity {
         ctrlMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValue1 = Float.parseFloat(mainDisplay.getText() + "");
+                if (mainDisplay.getText() == "" || mainDisplay.getText() == null){
+                    mValue1 = 0;
+                }
+                else{
+                    mValue1 = Float.parseFloat(mainDisplay.getText() + "");
+                }
                 subtraction = true;
                 mainDisplay.setText(null);
             }
@@ -173,7 +188,12 @@ public class CalculatorMain extends AppCompatActivity {
         ctrlPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValue1 = Float.parseFloat(mainDisplay.getText() + "");
+                if (mainDisplay.getText() == "" || mainDisplay.getText() == null){
+                    mValue1 = 0;
+                }
+                else{
+                    mValue1 = Float.parseFloat(mainDisplay.getText() + "");
+                }
                 addition = true;
                 mainDisplay.setText(null);
             }
@@ -182,7 +202,12 @@ public class CalculatorMain extends AppCompatActivity {
         ctrlEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValue2 = Float.parseFloat(mainDisplay.getText() + "");
+                if (mainDisplay.getText() == "" || mainDisplay.getText() == null){
+                    mValue2 = 0;
+                }
+                else{
+                    mValue2 = Float.parseFloat(mainDisplay.getText() + "");
+                }
                 if(addition){
                     mainDisplay.setText(mValue1 + mValue2 + "");
                     addition = false;
